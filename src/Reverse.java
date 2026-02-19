@@ -13,7 +13,12 @@ public class Reverse {
         }
         System.out.println("the reversed string is: ");
         System.out.println(rev);
-
+        if(input==rev){
+            System.out.println("True");
+        }
+        else{
+            System.out.println("False");
+        }
 
     }
 }
