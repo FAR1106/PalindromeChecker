@@ -13,7 +13,7 @@ public class Reverse {
         }
         System.out.println("the reversed string is: ");
         System.out.println(rev);
-
-
+        boolean isPalindrome=input.equals(rev);
+        System.out.println(isPalindrome);
     }
 }
