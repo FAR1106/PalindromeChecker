@@ -1,32 +1,19 @@
-import java.util.LinkedList;
-
+import java.util.Scanner;
 public class Revtp {
-
-    public static void main(String[] args) {
-
-        String input = "level";
-
-        LinkedList<Character> list = new LinkedList<>();
-
-        for (char c : input.toCharArray()) {
-            list.add(c);
+    /*
+    UC9.0git add
+     */
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string: ");
+        String input=sc.nextLine();
+        String rev="";
+        for(int i=input.length()-1;i>=0;i--){
+            rev+=input.charAt(i);
         }
-
-        boolean isPalindrome = true;
-
-        while (list.size() > 1) {
-            char first = list.removeFirst();
-            char last = list.removeLast();
-
-            if (first != last) {
-
-                isPalindrome = false;
-                break;
-            }
-        }
-
-        System.out.println("Input : " + input);
-        System.out.println("Is Palindrome? : " + isPalindrome);
+        System.out.println("the reversed string is: ");
+        System.out.println(rev);
+        boolean isPalindrome=input.equals(rev);
+        System.out.println(isPalindrome);
     }
 }
-
